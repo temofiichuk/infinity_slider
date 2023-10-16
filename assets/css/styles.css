@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a,
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  /* IE */
+  display: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.non-scroll {
+  touch-action: none;
+  -ms-touch-action: none;
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(to left top, #7300ff, #006bff, #008bff, #009dd9, #00a9b3, #00a5a2, #00a18d, #009c77, #008b70, #007968, #00695e, #005853);
+}
+
+.container {
+  width: 100%;
+  max-width: 1130px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+.slider-x {
+  width: 100%;
+  max-width: max-content;
+  margin: 50px auto;
+}
+.slider-x .slider-x_track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(33.3333333333% - 10px);
+  column-gap: 15px;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  height: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.slider-x .slider-x_track::-webkit-scrollbar {
+  display: none;
+}
+.slider-x .slider-x_track .slider-x_slide {
+  scroll-snap-align: start;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.slider-x .slider-x_track.non-smoothly {
+  scroll-behavior: unset;
+}
+.slider-x .slider-x_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 22px;
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.73);
+  -moz-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.73);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.73);
+}
+.slider-x .slider-x_button span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.slider-x .slider-x_button.right {
+  right: -20px;
+  padding: 0 6px 0 10px;
+}
+.slider-x .slider-x_button.left {
+  left: -20px;
+  padding: 0 10px 0 6px;
+}
+
+/*# sourceMappingURL=styles.css.map */
